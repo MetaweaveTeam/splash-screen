@@ -1,3 +1,4 @@
+<?php require 'config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,7 @@
 <body>
   <div id="logo">
     <div id="subdomain">
-      account
+      <?php echo CONFIG["name"]; ?>
     </div>
     <img src="assets/metaweave_dark-avatar.png" alt="metaweave logo">
     <div id="text">
@@ -19,7 +20,7 @@
   </div>
   <script>
     setTimeout(() => {
-      window.location.href = "https://dtq4dg53zu5ibxntronioyho3i5pxhwbbmtr6voqfuq6payyfxvq.arweave.net/HOHBm7vNOoDds4uah2Du2jr7nsELJx9V0C0h54MYLes";
+      window.location.href = "<?php echo CONFIG["redirection_url"]; ?>?nocache=<?php echo time(); ?>"
     }, 2000);
   </script>
 </body>
